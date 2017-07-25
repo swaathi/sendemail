@@ -105,15 +105,15 @@ This works perfect when you don't want someone masking your identity. But often 
 
 Let's see how that works!
 
-1. Sing up on SendGrid
+**1. Sing up on SendGrid**
 Headover to the signup page of [SendGrid](https://sendgrid.com/signup), and to test things out select the FreeTrial. This allows you to send 40,0000 emails per day for 30 days.
 
 <img src="readme/3.png" />
 
-2. Head over to the Whilelabels section
+**2. Head over to the Whilelabels section**
 After that visit the Settings section in the sidebar and then click on the [Whitelables link](https://app.sendgrid.com/settings/whitelabel) from the dropdown.
 
-3. Add a Domain
+**3. Add a Domain**
 Click on the 'Add Domain' button and fill in the form. You need to do this so that users who receive an email that your app sends will be shown the location of origin. So, even if an user on your app has xxx@yyy.com, it'll get sent from this email, but will also include a [text that says 'via DomainName'](https://support.google.com/mail/answer/1311182.
 
 > You'll see "via" and a website name next to the sender's name if the domain it was sent from doesn't match the domain in the "From:" address. For example, you got an email from john.smith@gmail.com, but it could've been sent through a social networking site and not Gmail.
@@ -122,7 +122,7 @@ Click on the 'Add Domain' button and fill in the form. You need to do this so th
 
 In the form you'll have to enter a subdomain and a domain you'd like to send emails through. I suggest you to create a new subdomain, so that you don't run into any weird conflicts. In fact, it shouldn't even exist at this stage.
 
-4. Add to your CNAMES registry
+**4. Add to your CNAMES registry**
 Once you add a domain you'll be taken to a page that looks like this,
 
 <img src="readme/5.png" />
@@ -139,7 +139,7 @@ Then headback to your SendGrid page and click on the 'Validate Record' button, a
 
 If not, wait for awhile for your DNS to get updated and try again.
 
-5. Add SendGrid credentials to your app
+**5. Add SendGrid credentials to your app**
 We're almost there. All you have to do now is add SendGrid credentials to your `development.rb` (or `production.rb`). It will look something like this,
 
 ```
