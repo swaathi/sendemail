@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Emails</h1>
+
+  <table class="striped-table">
+    <thead>
+      <tr>
+        <th>Receiver</th>
+        <th>Subject</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @emails.each do |email| %>
+        <tr>
+          <td><%= email.receiver %></td>
+          <td><%= email.subject %></td>
+          <td>
+            <%= link_to 'Show', email %> |
+            <%= link_to 'Edit', edit_email_path(email) %> |
+            <%= link_to 'Resend', resend_email_path(email), method: :post, data: { confirm: 'Are you sure?' } %> |
+            <%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Email', new_email_path %>
+</div>

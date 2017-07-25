@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Editing Email</h1>
+
+  <%= render 'form', email: @email %>
+  <em>Emails are resent if any field is updated.</em>
+
+  <%= link_to 'Show', @email %> |
+  <%= link_to 'Back', emails_path %>
+</div>
